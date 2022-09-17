@@ -1,0 +1,128 @@
+<div class="body">
+    <div class="row p-2">
+        <div class="col-12 col-md-7 col-lg-7 col-sm-12">
+            <div class="row p-1">
+                <div class="col-md-4 col-sm-12 p-1">
+                    <div class="card p-2" class="cardCommon">
+                        <div class="row">
+                            <div class="col-4 divClass">
+                                <span
+                                    style="font-size: 49px;font-family:'Cairo', sans-serif;color: #106d64;padding-left: 10px;">{{TotTastks}}</span>
+                            </div>
+                            <div class="col-8 divClass">
+                                <span style="font-size: 13px;">Total number of tasks</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-12 p-1">
+                    <div class="card p-2" class="cardCommon">
+                        <div class="row">
+                            <div class=" col-4 col-md-4 col-sm-4" style="padding-left: 20px;padding-top:10px">
+                                <div class="progress green">
+                                    <span class="progress-left">
+                                        <span class="progress-bar"></span>
+                                    </span>
+                                    <span class="progress-right">
+                                        <span class="progress-bar"></span>
+                                    </span>
+                                    <div class="progress-value">{{NoOfTrack>10?'':0}}{{NoOfTrack}}</div>
+                                </div>
+                            </div>
+                            <div class="col-8 pt-3 divClass">
+                                <span style="font-size: 13px;">Number of Tasks on Track</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-12 p-1">
+                    <div class="card p-2" class="cardCommon">
+                        <div class="row">
+                            <div class=" col-4 col-md-4 col-sm-4" style="padding-left: 20px;padding-top:10px">
+                                <div class="progress yellow">
+                                    <span class="progress-left">
+                                        <span class="progress-bar"></span>
+                                    </span>
+                                    <span class="progress-right">
+                                        <span class="progress-bar"></span>
+                                    </span>
+                                    <div class="progress-value">{{NoOfDelay>10?'':0}}{{NoOfDelay}}</div>
+                                </div>
+                            </div>
+                            <div class="col-8 pt-3 divClass">
+                                <span style="font-size: 13px;">Number of Tasks Delayed</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-12 col-md-5 col-lg-5 col-sm-12">
+            <div class="row p-1">
+                <div class="col-md-6 col-sm-12 p-1">
+                    <div class="card p-2" class="cardCommon">
+                        <div class="row">
+                            <div class=" col-4 col-md-4 col-sm-4" style="padding-left: 20px;padding-top:10px">
+                                <div class="progress pink">
+                                    <span class="progress-left">
+                                        <span class="progress-bar"></span>
+                                    </span>
+                                    <span class="progress-right">
+                                        <span class="progress-bar"></span>
+                                    </span>
+                                    <div class="progress-value">{{NoOfSDelay>10?'':0}}{{NoOfSDelay}}</div>
+                                </div>
+                            </div>
+                            <div class="col-8 pt-3 divClass">
+                                <span style="font-size: 13px;">Number of Tasks Significant Delayed</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-sm-12 p-1">
+                    <div class="card p-2" class="cardCommon">
+                        <div class="row">
+                            <div class="col-4 col-md-4 col-sm-4" style="padding-left: 20px;padding-top:10px">
+                                <div class="progress blue">
+                                    <span class="progress-left">
+                                        <span class="progress-bar"></span>
+                                    </span>
+                                    <span class="progress-right">
+                                        <span class="progress-bar"></span>
+                                    </span>
+                                    <div class="progress-value">{{NoOfCompleted>10?'':0}}{{NoOfCompleted}}</div>
+                                </div>
+                            </div>
+                            <div class="col-8 pt-3 divClass">
+                                <span style="font-size: 13px;">Number of Tasks Completed</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+    <div class="row p-2">
+        <div class="col-12 col-md-3 col-lg-3 col-sm-12">
+            <h6>Tasks Distribution</h6>
+            <br>
+            <app-doughnut-chart [data]="doughnutData" [polyLine]=true></app-doughnut-chart>
+        </div>
+        <div class="col-12 col-md-9 col-lg-9 col-sm-12">
+            <div class="row">
+                <div class="col-12 col-md-6 col-sm-12">
+                    <h6>Tasks by Beinex Sectors</h6>
+                    <br>
+                    <p-chart type="bar" [data]="beinexTask" [options]="stackedOptions"></p-chart>
+                </div>
+                <div class="col-12 col-md-6 col-sm-12">
+                    <h6>Tasks by Auraa</h6>
+                    <br>
+                    <p-chart type="bar" [data]="auraaTask" [options]="stackedOptions"></p-chart>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+</div>

@@ -1,0 +1,29 @@
+<app-side-bar (onToggleSideNav)="onToggleSideNav($event)"></app-side-bar>
+<div class="header" [ngClass]="getheaderClass()">
+    <div class="row p-0">
+        <div class="col-5 col-md-4 col-sm-2 p-0">
+            <img class="navbar-brand" src="assets/img/beinex.png" style="height:50px;width:120px ;padding-bottom: 0.4125rem;    padding-top: 0px;">
+        </div>
+        <div class="col-5 col-md-4 col-sm-8 p-2" style="text-align:center;color: #106d64;">
+            Executive dashboard
+        </div>
+        <div class="col-2 col-md-4 col-sm-2 p-2" style="text-align:right;color: #106d64">
+            <span class="p-1 mr-6">
+                <i class="fa fa-cog fa-lg" aria-hidden="true"></i>
+            </span>
+            <span class="p-1">
+                <i class="fa fa-user-o fa-lg" aria-hidden="true"></i>
+            </span>
+        </div>
+    </div>
+</div>
+<div class="body" [ngClass]="getBodyClass()">
+    <router-outlet></router-outlet> 
+</div>
+
+<!-- <app-body-layout
+    [collapsed]="isSideNavCollapsed"
+    [screenWidth]="screenWidth"
+></app-body-layout> -->
+
+<!-- <router-outlet></router-outlet> -->
