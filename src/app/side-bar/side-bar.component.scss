@@ -97,7 +97,7 @@
     }
 
     .sidenav-nav-item:hover {
-        border-left: 4px solid #106d64 ;
+        // border-left: 4px solid #106d64 ;
         .sidenav-nav-link {
             background-color: #c3cdd8;
             color: #4D505F;
@@ -107,7 +107,7 @@
 
 .active {
     background-color: #c2c8d0;
-
+    border-left: 4px solid #106d64 ;
     .sidenav-link-icon,
     .sidenav-link-text {
         color: #4D505F;
